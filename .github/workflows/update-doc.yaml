@@ -18,7 +18,9 @@ jobs:
         path: documentation
     - name: Update version in _config.yaml
       run: |
-        sed -i "s/latest_release: .*/latest_release: ${{ github.event.client_payload.version }}/" documentation/_config.yaml
+        version=${{ github.event.client_payload.version }}
+        version=${version#refs/tags/}
+        sed -i "s/latest_release: .*/latest_release: $version/" documentation/_config.yaml
     - name: Commit and push    
       run: |
         git config --global user.name '${{ secrets.USER_NAME }}'
