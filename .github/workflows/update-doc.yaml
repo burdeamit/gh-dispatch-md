@@ -2,7 +2,7 @@ name: Documentation Update
 
 on:
   repository_dispatch:
-    types: [new_release]
+    types: [specmatic_core_release]
 
 jobs:
   update_docs:
