@@ -2,7 +2,7 @@ name: Documentation Update
 
 on:
   repository_dispatch:
-    types: [specmatic_core_release]
+    types: [specmatic-core-release]
 
 env:
   SPECMATIC_LATEST_RELEASE_VERSION: ${{ github.event.client_payload.SPECMATIC_LATEST_RELEASE_VERSION }}    
