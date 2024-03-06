@@ -22,7 +22,7 @@ jobs:
       with:
         repository: burdeamit/gh-dispatch-md
         fetch-depth: 0
-        ref: master
+        ref: main
         token: ${{ secrets.UPDATE_TOKEN }}
         path: documentation
     - name: Update version in _config.yaml
