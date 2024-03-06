@@ -5,7 +5,7 @@ on:
     types: [specmatic-core-release]
 
 env:
-  SPECMATIC_LATEST_RELEASE_VERSION: ${{ github.event.client_payload.SPECMATIC_LATEST_RELEASE_VERSION }}    
+  SPECMATIC_LATEST_RELEASE_VERSION: ${{ github.event.client_payload.latest-release }}    
 
 jobs:
   update_docs:
