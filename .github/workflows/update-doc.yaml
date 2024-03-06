@@ -21,8 +21,6 @@ jobs:
         ref: main
         token: ${{ secrets.UPDATE_TOKEN }}
         path: documentation
-    - name: Set version
-      run: echo "VERSION=${VERSION#refs/tags/}" >> $GITHUB_ENV
     - name: Update version in _config.yaml
       run: |
         sed -i "s/latest_release: .*/latest_release: $SPECMATIC_LATEST_RELEASE_VERSION/" documentation/_config.yaml
