@@ -20,7 +20,7 @@ jobs:
     - name: Checkout documentation repository
       uses: actions/checkout@v4
       with:
-        repository: znsio/specmatic-documentation
+        repository: burdeamit/gh-dispatch-md
         fetch-depth: 0
         ref: master
         token: ${{ secrets.UPDATE_TOKEN }}
